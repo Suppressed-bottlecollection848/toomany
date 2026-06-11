@@ -1,0 +1,6 @@
+.build/
+dist/
+.DS_Store
+packaging/AppIcon.iconset/
+packaging/icon_1024.png
+attic/
