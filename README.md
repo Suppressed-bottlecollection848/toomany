@@ -4,9 +4,9 @@ A native macOS menu-bar launcher for your project folders. Press a global
 hotkey, type a few characters, hit ↩ — the project opens in Cursor, VS Code,
 your terminal, or wherever you want.
 
-<!-- TODO: add docs/screenshot-main.png and uncomment:
-![Launcher panel](docs/screenshot-main.png)
--->
+<p align="center">
+  <img src="docs/screenshot-main.png" width="700" alt="ProjectOpener launcher panel">
+</p>
 
 
 ## Features
